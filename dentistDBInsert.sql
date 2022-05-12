@@ -1,3 +1,6 @@
+use mydentistdatabase
+go
+
 INSERT INTO Dentists (dentist_name, speciality) 
     VALUES ("Andrea Sarmiento", "Caries"),
     ("Alejandro Ledezma", "Braquets"),
@@ -17,5 +20,5 @@ INSERT INTO Payments (appointment_id, amount, method)
     VALUES (1, 200, "Efectivo"),
     (3, 600, "Tarjeta");
 
-INSERT INTO Canceled (appointment_id, reason)
+INSERT INTO Cancellations (appointment_id, reason)
     VALUES (2, "Malestar estomacal");
