@@ -9,8 +9,8 @@ CREATE TABLE Dentists (
 );
 
 CREATE TABLE Clients (
-	id 				INT NOT NULL AUTO_INCREMENT,
-	client_name 	VARCHAR(100),
+	id INT NOT NULL AUTO_INCREMENT,
+	client_name VARCHAR(100),
 	PRIMARY KEY (id)
 );
 
@@ -19,7 +19,7 @@ CREATE TABLE Appointments (
 	dentist_id INT NOT NULL,
 	client_id INT NOT NULL,
 	appointment_date VARCHAR(100),
-	appointment_hour VARCHAR(10),
+	appointment_hour INT,
 	PRIMARY KEY (id),
 	CONSTRAINT FK_Appointment_DentistId FOREIGN KEY (dentist_id) REFERENCES Dentists(id),
 	CONSTRAINT FK_Appointment_ClientId FOREIGN KEY (client_id) REFERENCES Clients(id)
